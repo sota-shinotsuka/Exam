@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- ctrl + shift + / でHTMLのコメント -->
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Servlet/JSP Samples</title>
+</head>
+
+<body>
+	<form action="select" method="post">
+		<p>購入数を選択してください。</p>
+		<!-- select要素：セレクトボックス -->
+		<!-- name属性：サーバーが受け取る名前 -->
+			<select name="count">
+				<!-- option要素：選択肢 -->
+				<!-- value属性：選択された時に送信される値 -->
+				<!-- 中身：表示される文字列 -->
+				<!-- selected属性：初期値の項目に指定 -->
+				<option value="1" selected>1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+
+		<p>購入方法を選択してください。</p>
+		<!-- input要素のtype="radio"：ラジオボタン -->
+		<!-- name属性：サーバーが受け取る名前 　同じ名前でグループ化 -->
+		<!-- checked属性：初期値の項目に指定 -->
+
+		<!-- label要素：クリックが反応する範囲 -->
+		<!-- for属性：対象の要素のID -->
+		<label for="p1">
+			<input id="p1" type="radio" name="payment" value="カード" checked>カード
+		</label>
+		<label for="p2">
+			<input id="p2" type="radio" name="payment" value="代金引換" checked>代金引換
+		</label>
+		<label for="p3">
+			<input id="p3" type="radio" name="payment" value="銀行振込" checked>銀行振込
+		</label>
+		<label for="p4">
+			<input id="p4" type="radio" name="payment" value="コンビニ" checked>コンビニ
+		</label>
+
+		<p>商品のご感想をお寄せください。</p>
+		<!-- textarea属性：複数行の文字列入力 -->
+		<!-- cols属性：列数 -->
+		<!-- rows属性：行数 -->
+		<!-- placeholder属性：空欄時のみ表示されるテキスト -->
+		<!-- 中身：送信される値、または初期値 -->
+		<p><textarea name="review" cols="30" rows="5" placeholder="感想を入力して下さい">商品名：</textarea></p>
+
+		<p>お知らせメールの受信を希望されますか？</p>
+		<!-- input要素のtype="checkbox"：チェックボックス -->
+		<!-- 使い方はラジオボタンと同じ -->
+		<p><input type="checkbox" name="mail">おすすめ商品のメールを受け取る</p>
+
+		<p><input type="submit" value="確定"></p>
+	</form>
+
+</body>
+
+</html>
